@@ -14,7 +14,6 @@ class ProductPage(BasePage):
         basket_button.click()
         
     def should_be_cost_basket(self):
-        # реализуйте проверку, что есть форма логина
         cost = self.browser.find_element(*ProductPageLocators.PRODUCT_COST)
         assert cost == "9,99", "There is no basket cost"
         
