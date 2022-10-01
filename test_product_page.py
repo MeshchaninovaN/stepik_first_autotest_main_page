@@ -1,17 +1,18 @@
 from .pages.product_page import ProductPage
+from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 from selenium import webdriver
 import pytest
 import time
 
 @pytest.mark.need_review
 def test_guest_can_add_product_to_basket(browser):
-        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
-        page = ProductPage(browser, link)
-        page.open()
-        page.add_product_to_basket()
-        page.solve_quiz_and_get_code():
-        page.should_be_name_match()
-        page.should_be_cost_basket()
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.add_product_to_basket()
+    page.should_be_name_match()
+    page.should_be_cost_basket()
 
 @pytest.mark.need_review
 def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
