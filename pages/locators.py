@@ -19,8 +19,10 @@ class LoginPageLocators():
     
 class ProductPageLocators():
     BASKET_BUTTON = (By.CSS_SELECTOR, "[class='btn btn-lg btn-primary btn-add-to-basket']")
-    PRODUCT_COST = (By.CSS_SELECTOR, "div.basket-mini.pull-right.hidden-hs")
-    PRODUCT_NAME = (By.CSS_SELECTOR, "div.allertinner")
+    PRODUCT_COST_IN_BASKET = (By.CSS_SELECTOR, "div.basket-mini.pull-right.hidden-hs")
+    PRODUCT_COST = (By.CSS_SELECTOR, "p.price-color")
+    PRODUCT_NAME = (By.CSS_SELECTOR, "strong")
+    PRODUCT_NAME_MESSAGE = (By.TAG_NAME, "h1")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert:nth-child(1) .alertinner strong")
     BASKET_COST = (By.CSS_SELECTOR, ".alertinner :nth-child(1) strong")
     
